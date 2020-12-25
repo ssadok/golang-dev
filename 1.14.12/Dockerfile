@@ -1,4 +1,4 @@
-FROM golang:1.14.12-alpine
+FROM golang:1.14.12
 
 # install protobuf from source
 RUN apt-get update && \
