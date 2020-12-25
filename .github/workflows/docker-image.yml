@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image 1.14.12
-      run: docker build 1.14.12 --file Dockerfile --tag ssadok/golang-dev:1.14.12
+      run: docker build 1.14.12 --file 1.14.12/Dockerfile --tag ssadok/golang-dev:1.14.12
     - name: Build the Docker image 1.12.6
-      run: docker build 1.12.6 --file Dockerfile --tag ssadok/golang-dev:1.12.6
+      run: docker build 1.12.6 --file 1.12.6/Dockerfile --tag ssadok/golang-dev:1.12.6
