@@ -1,5 +1,5 @@
-FROM golang:1.14.12
-
+FROM quay.io/eclipse/che-golang-1.14:7.22.2
+USER root:root
 # install protobuf from source
 RUN apt-get update && \
     apt-get -y install git unzip build-essential autoconf libtool
@@ -22,6 +22,4 @@ RUN git clone https://github.com/google/protobuf.git && \
 RUN go get google.golang.org/grpc
 # Install protoc-gen-go
 RUN go get github.com/golang/protobuf/protoc-gen-go
-
-# Install Dep
-RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+USER user:root
